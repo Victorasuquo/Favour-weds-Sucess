@@ -34,4 +34,4 @@ Import the repository into Vercel. The standard Next.js preset works without env
 
 ## Content notes
 
-The bank details are rendered only after the visitor chooses “Reveal account details”. Account numbers are not included in metadata or social preview assets. Calendar, directions, copy, and share actions are all client-side and require no external service configuration.
+The bank details are visible in the gifts section with copy buttons. Account numbers are not included in metadata or social preview assets. The wishlist mirrors the supplied reference with product images, names, and naira prices. Calendar, directions, copy, and share actions are all client-side and require no external service configuration.

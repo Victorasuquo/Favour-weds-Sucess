@@ -177,6 +177,8 @@ h1 em, h2 em { color: var(--peach); font-style: italic; font-weight: 400; }
 .reveal-trigger { display: inline-flex; align-items: center; gap: 1rem; margin-top: 1rem; padding: 0.8rem 0; border: 0; border-bottom: 1px solid var(--burgundy); color: var(--burgundy); background: transparent; font-size: 0.75rem; font-weight: 700; cursor: pointer; }
 .reveal-trigger.is-open { color: var(--burgundy-soft); }
 .account-list { overflow: hidden; }
+.account-heading { margin: 1.6rem 0 0.8rem; color: var(--burgundy-soft); font-size: 0.72rem; font-weight: 700; }
+.account-list-static { overflow: visible; }
 .account-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(255,255,255,.34); }
 .account-card div > * { display: block; }
 .account-card span { color: var(--ink); font-size: 0.74rem; font-weight: 700; }
@@ -184,6 +186,20 @@ h1 em, h2 em { color: var(--peach); font-style: italic; font-weight: 400; }
 .account-card b { color: var(--burgundy); font-size: 0.92rem; letter-spacing: 0.08em; }
 .copy-button { display: inline-flex; align-items: center; gap: 0.4rem; border: 0; color: var(--burgundy); background: transparent; font-size: 0.68rem; font-weight: 700; cursor: pointer; }
 .copy-status { min-height: 1rem; margin: 0.7rem 0 0; color: var(--burgundy-soft); font-size: 0.68rem; }
+.wishlist-block { margin-top: clamp(4rem, 9vw, 8rem); }
+.wishlist-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.wishlist-heading .eyebrow { margin-bottom: 0.7rem; }
+.wishlist-heading h3 { margin: 0; color: var(--burgundy-900); font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 0.85; letter-spacing: -0.06em; }
+.wishlist-heading h3 em { color: var(--burgundy-soft); }
+.wishlist-heading > p { max-width: 260px; margin: 0 0 0.15rem; color: var(--muted); font-size: 0.78rem; line-height: 1.6; }
+.wishlist-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; }
+.wishlist-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(255,255,255,.35); transition: transform 220ms ease, box-shadow 220ms ease; }
+.wishlist-card:hover { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(58, 12, 29, 0.1); }
+.wishlist-image { position: relative; aspect-ratio: 1 / 0.92; overflow: hidden; background: #fffaf8; }
+.wishlist-image img { object-fit: contain; padding: 0.5rem; }
+.wishlist-meta { min-height: 5.6rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem; padding: 0.8rem 0.9rem 1rem; }
+.wishlist-meta h4 { margin: 0; color: var(--ink); font-size: 0.73rem; font-weight: 600; line-height: 1.35; }
+.wishlist-meta strong { color: var(--burgundy); font-family: var(--font-display), serif; font-size: 1.25rem; line-height: 0.9; }
 
 .site-footer { width: 100%; max-width: none; padding-right: 1rem; padding-left: 1rem; background: var(--burgundy-950); color: var(--peach-50); }
 .footer-card { max-width: 1120px; margin: 0 auto; padding: clamp(3rem, 8vw, 7rem) 1rem; text-align: center; }
@@ -221,6 +237,9 @@ h1 em, h2 em { color: var(--peach); font-style: italic; font-weight: 400; }
   .chapter-card { min-height: 260px; padding: 1.3rem; }
   .chapter-number { margin-bottom: 2rem; }
   .venue-image-wrap, .gift-image-wrap { min-height: 100vw; max-height: 560px; }
+  .wishlist-heading { align-items: flex-start; flex-direction: column; gap: 0.8rem; }
+  .wishlist-heading > p { max-width: 340px; }
+  .wishlist-grid { grid-template-columns: repeat(2, 1fr); }
   .account-card { align-items: flex-start; }
   .account-card b { font-size: 0.8rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -232,6 +251,9 @@ h1 em, h2 em { color: var(--peach); font-style: italic; font-weight: 400; }
   .swatch { min-height: 140px; }
   .story-intro h2, .day-copy h2, .gift-copy h2, .palette-intro h2 { font-size: 3.5rem; }
   .quote-wide p { font-size: 2rem; }
+  .wishlist-grid { gap: 0.55rem; }
+  .wishlist-meta { min-height: 6.2rem; padding-right: 0.65rem; padding-left: 0.65rem; }
+  .wishlist-meta h4 { font-size: 0.68rem; }
   .hashtag-row { gap: 0.45rem; font-size: 0.9rem; }
   .hashtag-row span:not(:last-child)::after { padding-left: 0.35rem; }
 }

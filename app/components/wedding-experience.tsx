@@ -32,6 +32,24 @@ const accountDetails = {
   bride: { name: 'Favour Ntiense Oton', number: '2177916624', bank: 'Zenith Bank' },
 };
 
+const wishlistItems = [
+  { name: 'Any amount', price: 'Cash gift', image: '/wedding/wishlist/any-amount.png', alt: 'Cash gifts are welcomed' },
+  { name: 'Buchymix Premium Digital Turbocrush Blender', price: 'N60,000', image: '/wedding/wishlist/blender.jpg', alt: 'Buchymix Premium Digital Turbocrush Blender' },
+  { name: 'High-quality non-stick cookware set', price: 'N145,000', image: '/wedding/wishlist/cookware.jpg', alt: 'High-quality non-stick cookware set' },
+  { name: 'LG Split AC 1.5HP Artcool Black Mirror', price: 'N420,000', image: '/wedding/wishlist/air-conditioner.jpg', alt: 'LG Split AC 1.5HP Artcool Black Mirror' },
+  { name: 'LG 8kg Fully Automatic Front Load Washing Machine', price: 'N280,000', image: '/wedding/wishlist/washing-machine.jpg', alt: 'LG 8kg Fully Automatic Front Load Washing Machine' },
+  { name: 'Electric oven', price: 'N60,000', image: '/wedding/wishlist/electric-oven.jpg', alt: 'Electric oven' },
+  { name: 'Three-burner tabletop gas cooker', price: 'N80,000', image: '/wedding/wishlist/gas-cooker.jpg', alt: 'Three-burner tabletop gas cooker' },
+  { name: '700W countertop microwave', price: 'N80,000', image: '/wedding/wishlist/microwave.jpg', alt: '700W countertop microwave' },
+  { name: 'A 60+4pcs kitchen set including plates, bowls, and cups', price: 'N50,000', image: '/wedding/wishlist/kitchen-set.jpg', alt: 'A 60 plus 4 pieces kitchen set' },
+  { name: 'Binatone fan, 18 inch blades, rechargeable, RCFM-1875, 2 units', price: 'N70,000', image: '/wedding/wishlist/fan.jpg', alt: 'Binatone rechargeable fan' },
+  { name: 'Samsung TV 43 FHD Smart Black UA43T5300', price: 'N350,000', image: '/wedding/wishlist/television.jpg', alt: 'Samsung 43 inch FHD Smart TV' },
+  { name: 'Hisense Bottom Freezer Refrigerator 225L (29DCA)', price: 'N250,000', image: '/wedding/wishlist/refrigerator.jpg', alt: 'Hisense bottom freezer refrigerator' },
+  { name: 'Multi-layer shoe rack with wheels', price: 'N50,000', image: '/wedding/wishlist/shoe-rack.jpg', alt: 'Multi-layer shoe rack with wheels' },
+  { name: 'Spacious multi-functional metal kitchen rack', price: 'N30,000', image: '/wedding/wishlist/kitchen-rack.png', alt: 'Spacious multi-functional metal kitchen rack' },
+  { name: 'Sumec Firman 5.5kva key start generator', price: 'N380,000', image: '/wedding/wishlist/generator.jpg', alt: 'Sumec Firman key start generator' },
+];
+
 function Reveal({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const reduceMotion = useReducedMotion();
   return (
@@ -66,7 +84,6 @@ function ActionButton({ href, onClick, children, icon }: { href?: string; onClic
 export default function WeddingExperience() {
   const heroRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [giftsOpen, setGiftsOpen] = useState(false);
   const [copied, setCopied] = useState('');
   const [shareLabel, setShareLabel] = useState('Share the invitation');
   const reduceMotion = useReducedMotion();
@@ -239,25 +256,35 @@ export default function WeddingExperience() {
             <p className="eyebrow">Gifts</p>
             <h2>Help us begin <em>beautifully.</em></h2>
             <p className="lead-copy">Your presence means the world to us. If you would also like to bless us with a gift, cash gifts are warmly welcomed.</p>
-            <button type="button" className={`reveal-trigger ${giftsOpen ? 'is-open' : ''}`} onClick={() => setGiftsOpen((value) => !value)} aria-expanded={giftsOpen}>
-              <span>{giftsOpen ? 'Hide account details' : 'Reveal account details'}</span>{giftsOpen ? <X size={18} /> : <ArrowUpRight size={18} />}
-            </button>
-            {giftsOpen ? (
-              <motion.div className="account-list" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}>
-                {Object.values(accountDetails).map((account) => (
-                  <div className="account-card" key={account.number}>
-                    <div><span>{account.name}</span><strong>{account.bank}</strong><b>{account.number}</b></div>
-                    <button type="button" className="copy-button" onClick={() => copyText(account.number, account.number)} aria-label={`Copy account number for ${account.name}`}>
-                      {copied === account.number ? <Check size={17} /> : <Copy size={17} />}
-                      <span>{copied === account.number ? 'Copied' : 'Copy'}</span>
-                    </button>
-                  </div>
-                ))}
-                <p className="copy-status" aria-live="polite">{copied && copied !== accountDetails.groom.number && copied !== accountDetails.bride.number ? copied : ''}</p>
-              </motion.div>
-            ) : null}
+            <p className="account-heading">Cash gifts are welcome via either account:</p>
+            <div className="account-list account-list-static">
+              {Object.values(accountDetails).map((account) => (
+                <div className="account-card" key={account.number}>
+                  <div><span>{account.name}</span><strong>{account.bank}</strong><b>{account.number}</b></div>
+                  <button type="button" className="copy-button" onClick={() => copyText(account.number, account.number)} aria-label={`Copy account number for ${account.name}`}>
+                    {copied === account.number ? <Check size={17} /> : <Copy size={17} />}
+                    <span>{copied === account.number ? 'Copied' : 'Copy'}</span>
+                  </button>
+                </div>
+              ))}
+              <p className="copy-status" aria-live="polite">{copied && copied !== accountDetails.groom.number && copied !== accountDetails.bride.number ? copied : ''}</p>
+            </div>
           </Reveal>
         </div>
+        <Reveal className="wishlist-block" delay={0.08}>
+          <div className="wishlist-heading">
+            <div><p className="eyebrow">Our wishlist</p><h3>Gifts we would <em>love</em> to receive.</h3></div>
+            <p>Choose any item that speaks to you, or bless us with any amount.</p>
+          </div>
+          <div className="wishlist-grid">
+            {wishlistItems.map((item) => (
+              <article className="wishlist-card" key={item.name}>
+                <div className="wishlist-image"><Image src={item.image} alt={item.alt} fill sizes="(max-width: 640px) 45vw, (max-width: 980px) 30vw, 18vw" /></div>
+                <div className="wishlist-meta"><h4>{item.name}</h4><strong>{item.price}</strong></div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       <footer className="site-footer section-pad">
