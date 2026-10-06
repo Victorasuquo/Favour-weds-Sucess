@@ -47,7 +47,7 @@ const wishlistItems = [
   { name: 'Hisense Bottom Freezer Refrigerator 225L (29DCA)', price: 'N250,000', image: '/wedding/wishlist/refrigerator.jpg', alt: 'Hisense bottom freezer refrigerator' },
   { name: 'Multi-layer shoe rack with wheels', price: 'N50,000', image: '/wedding/wishlist/shoe-rack.jpg', alt: 'Multi-layer shoe rack with wheels' },
   { name: 'Spacious multi-functional metal kitchen rack', price: 'N30,000', image: '/wedding/wishlist/kitchen-rack.png', alt: 'Spacious multi-functional metal kitchen rack' },
-  { name: 'Rubitec 550W/500W monocrystalline solar panel', price: 'N270,000', image: '/wedding/wishlist/solar-panel.jpg', alt: 'Rubitec monocrystalline solar panel' },
+  { name: '550W monocrystalline solar panel', price: 'N270,000', image: '/wedding/wishlist/solar-panel.jpg', alt: 'Clean 550W monocrystalline solar panel' },
 ];
 
 function Reveal({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
