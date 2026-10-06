@@ -47,7 +47,7 @@ const wishlistItems = [
   { name: 'Hisense Bottom Freezer Refrigerator 225L (29DCA)', price: 'N250,000', image: '/wedding/wishlist/refrigerator.jpg', alt: 'Hisense bottom freezer refrigerator' },
   { name: 'Multi-layer shoe rack with wheels', price: 'N50,000', image: '/wedding/wishlist/shoe-rack.jpg', alt: 'Multi-layer shoe rack with wheels' },
   { name: 'Spacious multi-functional metal kitchen rack', price: 'N30,000', image: '/wedding/wishlist/kitchen-rack.png', alt: 'Spacious multi-functional metal kitchen rack' },
-  { name: 'Sumec Firman 5.5kva key start generator', price: 'N380,000', image: '/wedding/wishlist/generator.jpg', alt: 'Sumec Firman key start generator' },
+  { name: 'Sumec Firman 5.5KVA key-start generator', price: 'N485,999', image: '/wedding/wishlist/generator.png', alt: 'Sumec Firman key-start generator' },
 ];
 
 function Reveal({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
