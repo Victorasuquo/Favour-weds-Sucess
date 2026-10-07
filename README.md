@@ -1,4 +1,4 @@
-# Favour weds Success
+# Favour weds Godswill
 
 A static, Vercel-ready Next.js wedding invitation for Favour Ntiense Oton and Godswill Alexander Abiodun, #GodsFav'26.
 

@@ -25,7 +25,7 @@ const eventDate = 'Saturday, 14 November 2026';
 const venue = "Deeper Life Young Adults' Church Uyo";
 const address = 'Four Lanes, 14 Edem Akai Street, Uyo, Akwa Ibom State';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${venue}, ${address}`)}`;
-const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Favour weds Success')}&dates=20261114T100000/20261114T130000&details=${encodeURIComponent("The solemnization of Favour Ntiense Oton and Godswill Alexander Abiodun. #GodsFav'26")}&location=${encodeURIComponent(`${venue}, ${address}`)}`;
+const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Favour weds Godswill')}&dates=20261114T100000/20261114T130000&details=${encodeURIComponent("The solemnization of Favour Ntiense Oton and Godswill Alexander Abiodun. #GodsFav'26")}&location=${encodeURIComponent(`${venue}, ${address}`)}`;
 
 const accountDetails = {
   groom: { name: 'Godswill Alexander Abiodun', number: '2255389514', bank: 'Zenith Bank' },
@@ -102,7 +102,7 @@ export default function WeddingExperience() {
   }
 
   async function shareInvite() {
-    const shareData = { title: 'Favour weds Success', text: "Join Favour and Godswill on 14 November 2026.", url: window.location.href };
+    const shareData = { title: 'Favour weds Godswill', text: "Join Favour and Godswill on 14 November 2026.", url: window.location.href };
     try {
       if (navigator.share) {
         await navigator.share(shareData);
@@ -146,7 +146,7 @@ export default function WeddingExperience() {
         <div className="hero-wash" aria-hidden="true" />
         <motion.div className="hero-content" style={{ y: reduceMotion ? 0 : heroY, opacity: reduceMotion ? 1 : heroOpacity }}>
           <p className="eyebrow light-eyebrow"><span className="eyebrow-dot" /> A solemnization of love <span className="eyebrow-dot" /></p>
-          <h1>Favour <em>weds</em> Success</h1>
+          <h1>Favour <em>weds</em> Godswill</h1>
           <p className="hero-names">Favour Ntiense Oton <span>&</span> Godswill Alexander Abiodun</p>
           <p className="hero-date">{eventDate} <span>·</span> 10:00 AM <span>·</span> Uyo</p>
           <div className="hero-actions">
@@ -164,7 +164,7 @@ export default function WeddingExperience() {
           <Reveal className="story-intro">
             <p className="eyebrow">With grateful hearts</p>
             <h2>Two lives, one <em>beautiful</em> promise.</h2>
-            <p className="lead-copy">The families of late Pst. and late Mrs. Ntiense Oton, together with late and Mrs. Alexander Abiodun, cordially invite you to the solemnization of their beloved children.</p>
+            <p className="lead-copy">The family of late Pst. and late Mrs. Ntiense Oton, together with the family of late Mr. Alexander Abiodun and Mrs. Tina Alexander Abiodun, cordially invite you to the solemnization of their beloved children.</p>
             <p className="couple-line">Favour Ntiense Oton <span>&</span> Godswill Alexander Abiodun</p>
           </Reveal>
           <Reveal className="quote-card" delay={0.12}>
@@ -203,7 +203,7 @@ export default function WeddingExperience() {
             <p className="chapter-number">03</p>
             <FlowerLotus size={24} weight="duotone" />
             <h3>The celebration</h3>
-            <p>Dress in the colours of the day and bring your warmest wishes for Favour and Success.</p>
+            <p>Dress in the colours of the day and bring your warmest wishes for Favour and Godswill.</p>
           </Reveal>
         </div>
       </section>
@@ -299,7 +299,7 @@ export default function WeddingExperience() {
           <div className="hashtag-row"><span>#GodsFav&apos;26</span><span>#FavWillLove&apos;26</span><span>#GodsFavoured&apos;26</span><span>#FG&apos;26</span></div>
           <div className="footer-mark"><span>F</span><Heart size={17} weight="fill" /><span>G</span></div>
         </Reveal>
-        <div className="footer-bottom"><span>Favour weds Success</span><span>Made with faith and joy</span><span>FG&apos;26</span></div>
+        <div className="footer-bottom"><span>Favour weds Godswill</span><span>Made with faith and joy</span><span>FG&apos;26</span></div>
       </footer>
     </main>
   );

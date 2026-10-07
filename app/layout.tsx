@@ -18,12 +18,12 @@ const bodyFont = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://favour-weds-success.vercel.app'),
-  title: 'Favour weds Success | 14 November 2026',
+  title: 'Favour weds Godswill | 14 November 2026',
   description:
     'The wedding invitation of Favour Ntiense Oton and Godswill Alexander Abiodun, #GodsFav\'26.',
-  keywords: ['Favour weds Success', 'Favour Ntiense Oton', 'Godswill Alexander Abiodun', 'Uyo wedding'],
+  keywords: ['Favour weds Godswill', 'Favour Ntiense Oton', 'Godswill Alexander Abiodun', 'Uyo wedding'],
   openGraph: {
-    title: 'Favour weds Success',
+    title: 'Favour weds Godswill',
     description: 'Join us for the solemnization of Favour and Godswill in Uyo on 14 November 2026.',
     type: 'website',
     images: [{ url: '/wedding/hero-florals.png', width: 1536, height: 1024, alt: 'Burgundy and peach wedding florals' }],
